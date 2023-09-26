@@ -1,10 +1,15 @@
 import React from "react"
-import './Input.css'
+import './component.css'
+import { Field, ErrorMessage } from "formik";
+import TextError from "./TextError";
 
-const TextInput = (props) => {
+const FormikTextInputField = (props) => {
     return (
-        <input className="text-input" required={props.required} placeholder={props.placeholder} type={props.type} id={props.id} name={props.name} />
+        <>
+        <Field placeholder={props.placeholder} type={props.type} id={props.id} name={props.name} />
+        <ErrorMessage name={props.name} component={TextError}/>
+        </>
     );
 }
 
-export default TextInput;
+export default FormikTextInputField;

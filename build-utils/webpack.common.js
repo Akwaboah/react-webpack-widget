@@ -68,8 +68,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./public/index.html",
             filename: './index.html',
-            favicon: './public/favicon.ico',
-            inject: 'head',
+            favicon: 'public/favicon.ico',
+            inject: 'body',
             scriptLoading: 'blocking'
         }),
         new MiniCssExtractPlugin({
